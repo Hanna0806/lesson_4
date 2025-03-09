@@ -76,13 +76,36 @@ function selectFromInterval(arr, a, b) {
 // const arr3 = selectFromInterval([4, 8, 11, 66, 94, 7, 32], 11.5, 94);
 
 const arr4 = selectFromInterval([4, 8, 11, 66, 94, 7, 32], 11, 66);
-console.log(arr4)
+console.log(arr4);
 
 const arr5 = selectFromInterval([4, 8, 11, 66, 94, 7, 32], 11, 66);
-console.log(arr5)
+console.log(arr5);
 
+// 3) Дан массив объектов
+// const arr = [
+//     {name: 'Bob', age: '25'},
+//     {name: 'Ann', age: '30'},
+//     {name: 'Tom', age: '35'},
+// ]
 
+// Написать функцию fn:
+// const fn = () => {...}
 
+// arr.forEach(fn('name')) // Bob, Ann, Tom
+// arr.forEach(fn('age')) // 25, 30, 35
 
+const arr = [
+    { name: 'Bob', age: '25' },
+    { name: 'Ann', age: '30' },
+    { name: 'Tom', age: '35' },
+]
 
+const fn = (key) => {
+    return (item) => {
+        console.log(item[key]);
+    }
+}
+
+arr.forEach(fn('name')); // Bob, Ann, Tom
+arr.forEach(fn('age')); // 25, 30, 35
 
